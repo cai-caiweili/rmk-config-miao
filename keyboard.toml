@@ -1,12 +1,11 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "tbknano"
-product_name = "tbknano"
+name = "RMK MIAO"
+product_name = "MIAO"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "xinta"
+manufacturer = "luxian"
 chip = "nrf52840"
-
 
 [behavior]
 tap_hold = { enable_hrm = true, prior_idle_time = "180ms", hold_timeout = "200ms", post_wait_time = "1ms"}
@@ -19,10 +18,11 @@ cols = 10
 layers = 10
 keymap = [
     [
-        ["Kp8", "Kp9","Kp7", "Kp8", "Kp9","Kp7", "Kp8", "Kp9","Kp7", "Kp8"],
-        ["Kp5", "Kp6","Kp4", "Kp5", "Kp6","Kp4", "Kp5", "Kp6","Kp4", "Kp5"],
-        ["Kp2", "Kp3","Kp1", "Kp2", "Kp3","Kp1", "Kp2", "Kp3","Kp1", "Kp2"],
-        ["_","_","Kp0", "MO(1)", "Dot","Kp0", "MO(1)", "Dot","_","_"]
+        ["Kp8", "Kp9","Kp7", "Kp8", "Kp9","Kp7", "Kp8", "Kp9","Kp7", "Kp8","Kp7", "Kp8"],
+        ["Kp5", "Kp6","Kp4", "Kp5", "Kp6","Kp4", "Kp5", "Kp6","Kp4", "Kp5","Kp7", "Kp8"],
+        ["Kp2", "Kp3","Kp1", "Kp2", "Kp3","Kp1", "Kp2", "Kp3","Kp1", "Kp2","Kp7", "Kp8"],
+        ["Kp0", "MO(1)", "Dot","Kp0"],
+        ["Kp0", "MO(1)", "Dot","Kp0"]
     ]
 ]
 
@@ -53,27 +53,25 @@ connection = "ble"
 
 
 [split.central]
-rows = 4
-cols = 5
+rows = 5
+cols = 6
 row_offset = 0
 col_offset = 0
 ble_addr = [0x18, 0xe2, 0x21, 0x80, 0xc0, 0xc7]
 [split.central.matrix]
 matrix_type = "normal"
-input_pins = ["P0_31", "P1_15", "P0_24", "P0_22"]
-output_pins = ["P0_02", "P0_29", "P0_09", "P1_00","P0_11"] 
+input_pins = ["P0_09", "P0_10", "P1_11", "P1_13", "P1_15"]
+output_pins = ["P1_06", "P1_04", "P0_11", "P1_00", "P0_24", "P0_22"] 
 
 
 [[split.peripheral]]
-rows = 4
-cols = 5
+rows = 5
+cols = 6
 row_offset = 0
-col_offset = 5
+col_offset = 6
 ble_addr = [0x7e, 0xfe, 0x73, 0x9e, 0x66, 0xe3]
 [split.peripheral.matrix]
 matrix_type = "normal"
-input_pins = ["P0_31", "P1_15", "P0_24", "P0_22"]
-output_pins = ["P0_11","P1_00","P0_09","P0_02","P0_29" ] 
-
-
+input_pins = ["P0_09", "P0_10", "P1_11", "P1_13", "P1_15"]
+output_pins = ["P1_06", "P1_04", "P0_11", "P1_00", "P0_24", "P0_22"] 
 
