@@ -75,3 +75,4 @@ matrix_type = "normal"
 input_pins = ["P0_09", "P0_10", "P1_11", "P1_13", "P1_15"]
 output_pins = ["P1_06", "P1_04", "P0_11", "P1_00", "P0_24", "P0_22"] 
 
+
